@@ -1,0 +1,23 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.pokesContainer{
+  width:1700px;
+  /* background-color: blue; */
+}
+.pokeCard{
+  border-radius:30px;
+  border-width:1px;
+  /* border-color:grey ; */
+  
+background: linear-gradient(90deg, rgba(10,27,106,1) 0%, rgba(25,19,62,1) 100%);
+box-shadow: 0 0px 5px rgba(81, 92, 255, 0.1),
+0 0px 10px rgba(81, 92, 255, 0.1),
+0 0px 10px rgba(81, 92, 255, 0.1),
+0 0px 10px rgba(81, 92, 255, 0.1),
+0 0px 15px rgba(81, 92, 255, 0.1),
+0 0px 15px rgba(255, 244, 244, 0.1)
+}
