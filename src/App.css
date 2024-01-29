@@ -1,23 +1,72 @@
+
 #root {
   /* max-width: 1280px; */
-  margin: 0 auto;
+
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 .pokesContainer{
-  width:1700px;
-  /* background-color: blue; */
+  /* width:1700px; */
+
+  justify-content: center;
+  align-self: center;
+  max-width: 1400px;
+  min-height:400px
+  
+}
+a{
+  text-decoration: none;
 }
 .pokeCard{
   border-radius:30px;
   border-width:1px;
   /* border-color:grey ; */
+  text-align: center;
+  text-decoration: none;
   
 background: linear-gradient(90deg, rgba(10,27,106,1) 0%, rgba(25,19,62,1) 100%);
 box-shadow: 0 0px 5px rgba(81, 92, 255, 0.1),
-0 0px 10px rgba(81, 92, 255, 0.1),
-0 0px 10px rgba(81, 92, 255, 0.1),
+0 0px 5px rgba(81, 92, 255, 0.1),
 0 0px 10px rgba(81, 92, 255, 0.1),
 0 0px 15px rgba(81, 92, 255, 0.1),
 0 0px 15px rgba(255, 244, 244, 0.1)
+
+
+}
+.pokeCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 10px rgba(81, 92, 255, 0.1),
+  0 0px 10px rgba(81, 92, 255, 0.1),
+  0 0px 15px rgba(81, 92, 255, 0.1),
+  0 0px 15px rgba(255, 244, 244, 0.1)
+  0 0px 20px rgba(255, 244, 244, 0.1)
+  0 0px 20px rgba(255, 244, 244, 0.1)
+  };
+.heart-icon {
+  transition: color 0.3s ease-in-out; /* Add a transition for the color property */
+}
+.showMoreBtn{
+  background: rgba(81, 92, 255, 0.1);
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color:white;
+  font-size: 18px;
+  box-shadow: 0 0px 5px rgba(81, 92, 255, 0.1),
+0 0px 5px rgba(81, 92, 255, 0.1),
+0 0px 10px rgba(81, 92, 255, 0.1),
+0 0px 15px rgba(81, 92, 255, 0.1),
+0 0px 15px rgba(255, 244, 244, 0.1);
+transition: .6s;
+opacity: 1;
+
+}
+.showMoreBtn:hover{
+  opacity: 0.7;
+
 }

@@ -41,7 +41,7 @@ const PokemonType = ({ type }) => {
         return 'linear-gradient(90deg, #EE99AC, #F4BDC9)'; // Fairy
 
       default:
-        return 'linear-gradient(90deg, #A8A878, #C0C0A8)'; // Default gradient
+        return 'linear-gradient(90deg, #A8A878, #C0C0A8)'; 
     }
   };
 
@@ -49,11 +49,12 @@ const PokemonType = ({ type }) => {
     background: getGradientColor(type),
     color: 'white',
     padding: '4px 8px',
-    borderRadius: '4px',
+    borderRadius: '20px',
     textTransform: 'capitalize',
-    marginLeft: '10px',
-    marginRight: '10px',
+
+    marginRight: '5px',
     width: '75px',
+    boxShadow: "0 0px 10px rgba(81, 92, 255, 0.1), 0 0px 10px rgba(81, 92, 255, 0.1), 0 0px 15px rgba(81, 92, 255, 0.1), 0 0px 15px rgba(255, 244, 244, 0.1)",
   };
 
   return (
