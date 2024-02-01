@@ -54,7 +54,7 @@ function Home() {
   const loadData = async () => {
     try {
       setLoading(true)
-      let response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0.`)
+      let response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0.`)
       const { results } = response.data;
       const requests = results.map((result) => axios.get(result.url));
       const pokemonResponses = await Promise.all(requests);
@@ -138,6 +138,7 @@ function Home() {
   return (
     <animated.div style={fadeIn}>
       <Container className="pokesContainer  my-3" >
+        <h1>Pokedex</h1>
         <Row style={{ justifyContent: "center" }}>
           <Col md={6} lg={6} xl={6} className="my-3" >
             <input
@@ -175,7 +176,7 @@ function Home() {
           <option value="highnum">Highest Number (First)</option>
     
         </select> */}
-          <Col md={6} lg={4} xl={3} className="my-3" >
+          <Col md={6} lg={4} xl={4} className="my-3" >
             <Select options={sortOptions} onChange={handleSortChange} defaultValue={sortOptions.find(option => option.value === "lownum")} styles={customStyles} />
           </Col>
         </Row>
