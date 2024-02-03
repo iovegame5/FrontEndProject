@@ -8,7 +8,7 @@
   justify-content: center;
   align-self: center;
   max-width: 1400px;
-  min-height: 400px;
+  min-height: 50vw;
 }
 a {
   text-decoration: none;
@@ -101,8 +101,8 @@ a {
 @media screen and (max-width: 576px) {
   .semi-donut {
     --percentage: 0;
-    width: 80px; /* Adjusted width */
-    height: 40px; /* Adjusted height */
+    width: 60px; /* Adjusted width */
+    height: 30px; /* Adjusted height */
     position: relative;
     color: #fff;
     font-size: 11px; /* Adjusted font-size */
@@ -116,8 +116,8 @@ a {
 
   .semi-donut:after {
     content: "";
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border: 10px solid;
     border-color: grey grey var(--fill) var(--fill);
     position: absolute;
@@ -127,6 +127,9 @@ a {
     box-sizing: border-box;
     transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
     animation: fillAnimation 2s ease-in;
+  }
+  .pokeCard{
+    /* height: */
   }
 }
 @media screen and (max-width: 400px) {
@@ -176,4 +179,66 @@ a {
 .pokeDetailTxt{
   font-size: 16px;
   color:white;
+}
+
+.arrow-right {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.arrow-right{
+  content: '';
+  width: 30px; /* ปรับขนาดความกว้างของลูกศร */
+  height: 15px; /* ปรับขนาดความสูงของลูกศร */
+  border-top: 7.5px solid transparent;
+  border-bottom: 7.5px solid transparent;
+  border-left: 7.5px solid #fff; /* สีของลูกศร */
+  transform: translateY(-50%);
+  z-index: 1; /* ย้ายลูกศรไปข้างหน้าภาพ */
+}
+
+.evoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.evoCard{
+  /* display:block; */
+  width:100%;
+  /* background:red */
+  cursor: pointer;
+}
+.evoImage{
+  width:70%;
+  /* box-shadow: 0 0px 5px rgba(81, 92, 255, 0.1), 0 0px 5px rgba(81, 92, 255, 0.1),
+  0 0px 10px rgba(81, 92, 255, 0.1), 0 0px 15px rgba(81, 92, 255, 0.1),
+  0 0px 15px rgba(255, 244, 244, 0.1); */
+  background: none;
+  border: none;
+  margin-bottom: 20px;
+
+}
+
+@media screen and (max-width: 1200px) {
+  .arrow-right {
+    transform: rotate(90deg);
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .evoContainer {
+    flex-direction: column;
+  }
+  .evoImage{
+    width:50%;
+  }
+  .custom-toggler.navbar-toggler {
+    /* color: white !important; */
+    /* fill: red; */
+    /* border-color: white !important; */
+    /* background-color: white !important; */
+  }
 }

@@ -1,19 +1,18 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from 'react';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
-function NavbarCom() {
+function YourNavbar() {
   return (
-    <Navbar expand="lg" className="" sticky='top' style={{backgroundColor:"midnightblue", color:"white"}}>
+    <Navbar style={{background:"midnightblue", textAlign:"center", border:"none"}} expand="lg" variant="dark" sticky="top">
       <Container style={{color:"white"}}>
-        <Navbar.Brand  style={{color:"white"}} href="/">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse style={{color:"white"}} id="basic-navbar-nav">
-          <Nav style={{color:"white"}} className="me-auto">
-            <Nav.Link style={{color:"white"}}href="/">Home</Nav.Link>
-            <Nav.Link style={{color:"white"}}href="/favorites">Favorites</Nav.Link>
-         
+        <Navbar.Brand style={{color:"white"}} href="/">
+          <img alt="" src="/pokeball.png" width="30" height="30"></img>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" variant="dark" className="custom-toggler" />
+        <Navbar.Collapse  id="basic-navbar-nav">
+          <Nav style={{}} className="me-auto">
+            <Nav.Link style={{color:"white"}} href="/">Pokédex</Nav.Link>
+            <Nav.Link style={{color:"white"}} href="/favorites">Favorites</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -21,4 +20,4 @@ function NavbarCom() {
   );
 }
 
-export default NavbarCom;
+export default YourNavbar;

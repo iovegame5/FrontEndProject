@@ -137,8 +137,8 @@ function Home() {
 
   return (
     <animated.div style={fadeIn}>
-      <Container className="pokesContainer  my-3" >
-        <h1>Pokedex</h1>
+      <Container className="pokesContainer  my-3" style={{ textAlign: "center", color:"white", paddingTop:"30px" }} >
+        <h1>Pokédex</h1>
         <Row style={{ justifyContent: "center" }}>
           <Col md={6} lg={6} xl={6} className="my-3" >
             <input

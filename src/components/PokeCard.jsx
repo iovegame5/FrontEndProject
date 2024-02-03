@@ -47,16 +47,16 @@ const PokeCard = ({ pokemon }) => {
 
   return (
     <animated.div style={fadeIn}>
-      <a href={`/pokemon/${pokemon.id}`}>
-        <Card className="pokeCard" key={pokemon.id} style={{ transition: 'transform 0.2s', cursor: 'pointer', position: 'relative' }}>
-          <div style={{ height: "3rem", position: "relative" }}>
+      {/* <a href={`/pokemon/${pokemon.id}`}> */}
+        <Card onClick={()=>{goToDetail(pokemon.id)}} className="pokeCard" key={pokemon.id} style={{ transition: 'transform 0.2s', cursor: 'pointer', position: 'relative',    }}>
+          <div style={{ height: "3rem", position: "relative" , justifyContent:"flex-start", alignItems:"flex-start"}}>
             <div style={{ position: 'absolute', top: '5px', left: '5px', padding: "10px", color: 'grey', fontSize: "20px" }}>#{pokemon.id}</div>
             <div style={{ position: 'absolute', top: '5px', right: '5px', padding: "10px" }} onClick={handleFavoriteClick}>
               <FontAwesomeIcon icon={faHeart} className='heart-icon' style={{ color: favorites.some((p) => p.id === pokemon.id) ? 'red' : 'grey', width: "25px", height: "25px", cursor: 'pointer', transition: 'color 0.3s ease-in-out' }} />
             </div>
           </div>
           <div style={{ textTransform: 'capitalize', padding: "10px", color: 'white', fontSize: "24px" }}>{pokemon.name}</div>
-          <Card.Img variant="top" style={{ paddingTop: "20px" }} src={pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default || "/imagePlaceholder.png"} />
+          <Card.Img variant="top" style={{ paddingTop: "20px",  position:"relative", width:"60%", alignItems:"center", alignSelf:"center" }} src={pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default || "/imagePlaceholder.png"} />
           <Card.Body>
             <Card.Text style={{ color: 'white', display: 'flex', justifyContent: 'center' }}>
               <span style={{ marginRight: "20px" }}>Type</span>
@@ -66,7 +66,7 @@ const PokeCard = ({ pokemon }) => {
             </Card.Text>
           </Card.Body>
         </Card>
-      </a>
+      {/* </a> */}
       <Modal show={showConfirm} onHide={() => setShowConfirm(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Alert</Modal.Title>

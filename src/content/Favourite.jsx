@@ -134,7 +134,8 @@ function Favourite() {
 
     return (
         <animated.div style={fadeIn}>
-            <Container className="pokesContainer  my-3" >
+            <Container className="pokesContainer  my-3" style={{color:"white", paddingTop:"20px", textAlign:"center"}} >
+                <h1>Favorites Pokemon ({favorites.length})</h1>
                 <Row style={{ justifyContent: "center" }}>
                     <Col md={6} lg={6} xl={6} className="my-3" >
                         <input
