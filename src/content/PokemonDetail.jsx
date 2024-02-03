@@ -368,16 +368,18 @@ function PokemonDetail() {
                       </div>)}
                       {evoChain.length == 2 && (<div>
                         <div className="evoContainer">
-                          <div className="evoCard">
-                            <Image className="evoImage" src={
-                              evoChain[0].sprites.other['official-artwork'].front_default ||
-                              evoChain[0].sprites.front_default || "/imagePlaceholder.png"
-                            } thumbnail />
-                            <p style={{ color: "white" }}>#{evoChain[0].id} {evoChain[0].name}</p>
-                            {evoChain[0].types.map((type, index) => (
-                              <PokemonType key={index} type={type.type.name} />
-                            ))}
-                          </div>
+                          <Link to={`/pokemon/${evoChain[0].id}`} style={{ textDecoration: 'none', alignSelf: "flex-end" }} >
+                            <div className="evoCard">
+                              <Image className="evoImage" src={
+                                evoChain[0].sprites.other['official-artwork'].front_default ||
+                                evoChain[0].sprites.front_default || "/imagePlaceholder.png"
+                              } thumbnail />
+                              <p style={{ color: "white" }}>#{evoChain[0].id} {evoChain[0].name}</p>
+                              {evoChain[0].types.map((type, index) => (
+                                <PokemonType key={index} type={type.type.name} />
+                              ))}
+                            </div>
+                          </Link>
                           <div className="arrow-right"></div>
                           <Link to={`/pokemon/${evoChain[1].id}`} style={{ textDecoration: 'none', alignSelf: "flex-end" }} >
                             <div className="evoCard">

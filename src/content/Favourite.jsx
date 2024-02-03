@@ -60,7 +60,7 @@ function Favourite() {
             console.log(favorites)
             setPokes(favorites);
             setFilteredPokes(favorites)
-  
+
             console.log("filteredPokes:", filteredPokes)
         }
         catch (error) {
@@ -134,7 +134,7 @@ function Favourite() {
 
     return (
         <animated.div style={fadeIn}>
-            <Container className="pokesContainer  my-3" style={{color:"white", paddingTop:"20px", textAlign:"center"}} >
+            <Container className="pokesContainer  my-3" style={{ color: "white", paddingTop: "20px", textAlign: "center" }} >
                 <h1>Favorites Pokemon ({favorites.length})</h1>
                 <Row style={{ justifyContent: "center" }}>
                     <Col md={6} lg={6} xl={6} className="my-3" >
@@ -205,22 +205,27 @@ function Favourite() {
                     </div>
                 ) : (
                     <div>
-                        <Row className="my-3">
+
+                        {favorites.length > 0 ? (<Row className="my-3">
                             {filteredPokes.slice(0, displayCount).map((pokemon) => (
                                 <Col key={pokemon.id} md={6} lg={4} xl={3} className="my-3">
                                     <PokeCard pokemon={pokemon}></PokeCard>
                                 </Col>
                             ))}
 
-
-                        </Row>
-                        {filteredPokes.length > 16 && (
-                            <div className="d-flex justify-content-center my-3">
-                                <div className="showMoreBtn" variant="primary" onClick={handleShowMore}>
-                                    Load more
+                            {filteredPokes.length > 16 && (
+                                <div className="d-flex justify-content-center my-3">
+                                    <div className="showMoreBtn" variant="primary" onClick={handleShowMore}>
+                                        Load more
+                                    </div>
                                 </div>
-                            </div>
-                        )}
+                            )}
+                        </Row>) : (<h1 style={{marginTop:"100px"}}>You don't have favourite Pokemon</h1>)}
+
+
+
+
+
                     </div>
                 )}
             </Container>
