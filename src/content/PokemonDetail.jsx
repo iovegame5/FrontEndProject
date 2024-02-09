@@ -285,15 +285,13 @@ function PokemonDetail() {
                               <p className="pokeDetailTxt" style={{ fontSize: "20px" }}> {pokeDetail.weight / 10} Kg</p>
                             </Col>
                             <Col xs="6">
-                              <p className="pokeDetailTxt" style={{ opacity: 0.6 }}>Type</p>
+                              <p className="pokeDetailTxt" style={{ opacity: 0.6 }}>Category</p>
                             </Col>
                             <Col xs="6">
                               <p className="pokeDetailTxt" style={{ opacity: 0.6 }}> Abilities</p>
                             </Col>
                             <Col xs="6">
-                              {pokeDetail.types.map((type, index) => (
-                                <PokemonType key={index} type={type.type.name} style={{ position: "relative" }} />
-                              ))}
+                              <p className="pokeDetailTxt" style={{ fontSize: "20px" }}> {pokeDetail.height * 10} Cm</p>
                             </Col>
                             <Col xs="6" style={{ display: "flex" }}>
                               <p className="pokeDetailTxt" style={{ textTransform: "capitalize", fontSize: "20px" }}> {pokeDetail.abilities[0].ability.name}</p>
@@ -311,7 +309,14 @@ function PokemonDetail() {
 
                               </Modal>
                             </Col>
-                         
+                            <div style={{ paddingTop: "20px" }}>
+                              <h3 style={{ color: "white" }}>Type</h3>
+                              <div style={{ display: "flex", textAlign: "center" }}>
+                                {pokeDetail.types.map((type, index) => (
+                                  <PokemonType key={index} type={type.type.name} style={{ position: "relative" }} />
+                                ))}
+                              </div>
+                            </div>
                           </Row>
                           <Row>
                             <Col md={12} xl={12} className="" style={{ paddingTop: "20px" }} >
